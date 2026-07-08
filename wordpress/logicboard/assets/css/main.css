@@ -37,6 +37,31 @@ a{
 ul{
     list-style:none;
 }
+/* ===========================
+VARIÁVEIS
+=========================== */
+
+:root{
+
+    --primary:#19d4ff;
+    --primary-hover:#1fd6ff;
+
+    --bg:#07111c;
+    --bg-soft:#09131f;
+    --card:#111d2c;
+
+    --text:#ffffff;
+    --text-soft:#b7c6d5;
+
+    --border:rgba(255,255,255,.05);
+    --border-soft:rgba(255,255,255,.08);
+
+    --radius-sm:14px;
+    --radius-md:20px;
+    --radius-lg:22px;
+    --radius-xl:30px;
+
+}
 
 /* ===========================
 CONTAINER
@@ -81,14 +106,6 @@ HEADER
     align-items:center;
 
     height:100%;
-
-}
-
-.lb-logo img{
-    display:block;
-    height:96px;
-    width:auto;
-    max-height:96px;
 
 }
 
