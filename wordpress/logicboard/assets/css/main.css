@@ -1141,3 +1141,59 @@ LOGOS
     height:96px;
     max-height:96px;
 }
+/*==========================================
+MENU MOBILE
+==========================================*/
+
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    width:44px;
+    height:44px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:28px;
+    height:3px;
+    background:#fff;
+    border-radius:3px;
+    transition:.3s;
+}
+
+@media(max-width:980px){
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .lb-menu{
+        position:absolute;
+        top:90px;
+        left:0;
+        width:100%;
+        background:#07111c;
+        display:none;
+        padding:25px 0;
+        border-top:1px solid rgba(255,255,255,.05);
+    }
+
+    .lb-menu.active{
+        display:block;
+    }
+
+    .lb-menu ul{
+        flex-direction:column;
+        align-items:center;
+        gap:24px;
+    }
+
+    .lb-actions .btn-whatsapp{
+        display:none;
+    }
+
+}

@@ -158,3 +158,29 @@ function initReveal() {
     });
 
 }
+/* ==========================
+MENU MOBILE
+========================== */
+
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".lb-menu");
+
+if(menuToggle && menu){
+
+    menuToggle.addEventListener("click",function(){
+
+        menu.classList.toggle("active");
+
+    });
+
+    document.querySelectorAll(".lb-menu a").forEach(function(link){
+
+        link.addEventListener("click",function(){
+
+            menu.classList.remove("active");
+
+        });
+
+    });
+
+}
