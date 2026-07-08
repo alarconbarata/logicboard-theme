@@ -95,6 +95,27 @@ HEADER
 
     border-bottom:1px solid rgba(255,255,255,.06);
 
+    transition:
+    height .35s ease,
+    background .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.lb-header.scrolled{
+
+    height:76px;
+
+    background:rgba(6,13,22,.95);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.28);
+
+}
+
+.lb-header.scrolled .lb-logo img{
+
+    height:82px;
+
 }
 
 .lb-header .lb-container{
