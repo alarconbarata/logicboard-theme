@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="cta">
+<section class="cta reveal">
 
     <div class="lb-container">
 

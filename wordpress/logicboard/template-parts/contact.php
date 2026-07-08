@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<section class="contact" id="contato">
+<section class="contact reveal" id="contato">
 
     <div class="lb-container">
 

@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<section class="differentials" id="diferenciais">
+<section class="differentials reveal">
 
     <div class="lb-container">
 

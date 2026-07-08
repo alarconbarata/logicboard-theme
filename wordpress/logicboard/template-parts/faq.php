@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<section class="faq" id="faq">
+<section class="faq reveal">
 
     <div class="lb-container">
 

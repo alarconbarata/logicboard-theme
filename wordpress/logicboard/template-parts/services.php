@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<section class="services" id="servicos">
+<section class="services reveal" id="servicos">
 
     <div class="lb-container">
 

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="process" id="processo">
+<section class="process reveal" id="processo">
 
     <div class="lb-container">
 

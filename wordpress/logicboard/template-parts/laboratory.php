@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="laboratory" id="laboratorio">
+<section class="laboratory reveal" id="laboratorio">
 
     <div class="lb-container">
 
