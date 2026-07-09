@@ -28,24 +28,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             <div class="cta-buttons">
 
-                <a
-                    href="https://wa.me/5511970827003"
-                    target="_blank"
-                    class="btn-primary">
+    <a
+        href="https://wa.me/5511970827003"
+        target="_blank"
+        class="btn btn-primary">
 
-                    Solicitar orçamento
+        Solicitar orçamento
 
-                </a>
+    </a>
 
-                <a
-                    href="#contato"
-                    class="btn-outline">
+    <a
+        href="#contato"
+        class="btn btn-outline">
 
-                    Falar com um especialista
+        Falar com um especialista
 
-                </a>
+    </a>
 
-            </div>
+</div>
 
         </div>
 

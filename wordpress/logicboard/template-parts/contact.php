@@ -39,6 +39,7 @@ if (!defined('ABSPATH')) {
                     <p>contato@logicboard.com.br</p>
 
                 </div>
+                
 
                 <div class="contact-card">
 
@@ -87,7 +88,7 @@ if (!defined('ABSPATH')) {
                         placeholder="Descreva o problema do seu MacBook"></textarea>
 
                     <button
-                        class="btn-primary"
+                        class="btn btn-primary"
                         type="submit">
 
                         Solicitar orçamento
@@ -98,18 +99,51 @@ if (!defined('ABSPATH')) {
 
             </div>
 
+                </div><!-- fecha contact-grid -->
+
+        <div class="contact-map-card">
+
+            <h3>📍 Visite nosso laboratório</h3>
+
+            <p>
+                Estamos localizados em Alphaville, em uma estrutura preparada para
+                diagnósticos avançados e reparos especializados em placas lógicas Apple.
+            </p>
+
             <div class="contact-map">
 
-    <iframe
-        src="https://www.google.com/maps?q=Alameda+Madeira+258+Barueri&output=embed"
-        loading="lazy"
-        allowfullscreen>
-    </iframe>
+                <iframe
+                    src="https://www.google.com/maps?q=Alameda+Madeira+258+Barueri&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
 
-</div>
+            </div>
+
+            <div class="contact-address">
+
+                <strong>LogicBoard Specialists</strong><br>
+
+                Alameda Madeira, 258 – Sala 902<br>
+
+                Alphaville – Barueri/SP<br>
+
+                CEP 06454-010
+
+            </div>
+
+            <a
+                class="btn btn-primary"
+                href="https://maps.google.com/?q=Alameda+Madeira+258+Barueri"
+                target="_blank"
+                rel="noopener">
+
+                Abrir no Google Maps
+
+            </a>
 
         </div>
 
-    </div>
+    </div><!-- fecha lb-container -->
 
 </section>
