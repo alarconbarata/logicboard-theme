@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="cta-buttons">
 
     <a
-        href="https://wa.me/5511970827003"
+        href="<?php echo esc_url( logicboard_get_whatsapp_url() ); ?>"
         target="_blank"
         class="btn btn-primary">
 

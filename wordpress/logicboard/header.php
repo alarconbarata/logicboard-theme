@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<a
 				class="btn btn-whatsapp"
-				href="https://wa.me/5511970827003"
+				href="<?php echo esc_url( logicboard_get_whatsapp_url() ); ?>"
 				target="_blank"
 				rel="noopener">
 
