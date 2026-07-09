@@ -31,7 +31,7 @@ if (!defined('ABSPATH')) {
             <div class="hero-buttons">
 
                 <a
-                    class="btn-primary"
+                    class="btn btn-primary"
                     href="https://wa.me/5511970827003"
                     target="_blank">
 
@@ -40,7 +40,7 @@ if (!defined('ABSPATH')) {
                 </a>
 
                 <a
-                    class="btn-outline"
+                    class="btn btn-outline"
                     href="#servicos">
 
                     Conhecer serviços

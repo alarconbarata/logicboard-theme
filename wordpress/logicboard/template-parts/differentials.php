@@ -15,9 +15,9 @@ if (!defined('ABSPATH')) {
             <h2>Especialização, tecnologia e segurança</h2>
 
             <p>
-                Nosso laboratório é equipado para realizar reparos eletrônicos
-                complexos em placas lógicas Apple, seguindo processos técnicos
-                que garantem qualidade e confiabilidade.
+                Nosso  laboratório  conta com equipamentos profissionais e processos técnicos 
+                rigorosos para realizar reparos avançados em placas lógicas Apple, garantindo 
+                qualidade, confiabilidade e segurança em cada serviço.
             </p>
 
         </div>

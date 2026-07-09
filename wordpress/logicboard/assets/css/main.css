@@ -156,21 +156,55 @@ HEADER
 
 .btn-whatsapp{
 
-    background:#1fd6ff;
+    background:#25D366;
 
-    color:#061019;
+    color:#ffffff;
 
-    padding:14px 26px;
+}
+
+.btn-whatsapp:hover{
+
+    background:#20be5a;
+
+    box-shadow:0 15px 35px rgba(37,211,102,.30);
+
+}
+/*======================================
+BOTÕES
+======================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 32px;
 
     border-radius:40px;
 
     font-weight:700;
 
-    transition:.3s;
+    font-size:16px;
+
+    line-height:1;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:
+        background .30s ease,
+        color .30s ease,
+        border-color .30s ease,
+        transform .25s ease,
+        box-shadow .30s ease;
 
 }
 
-.btn-whatsapp:hover{
+.btn:hover{
 
     transform:translateY(-2px);
 
@@ -257,23 +291,31 @@ HERO
 
     color:#06111c;
 
-    padding:18px 34px;
+}
 
-    border-radius:40px;
+.btn-primary:hover{
 
-    font-weight:700;
+    background:#14c6ec;
+
+    box-shadow:0 15px 35px rgba(31,214,255,.25);
 
 }
 
 .btn-outline{
 
-    border:1px solid rgba(255,255,255,.2);
+    background:transparent;
 
-    color:#fff;
+    color:#ffffff;
 
-    padding:18px 34px;
+    border:1px solid rgba(255,255,255,.20);
 
-    border-radius:40px;
+}
+
+.btn-outline:hover{
+
+    border-color:#19d4ff;
+
+    color:#19d4ff;
 
 }
 
@@ -301,11 +343,18 @@ HERO
 
 .hero-media{
 
-    position:relative;
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
 
 }
 
 .hero-media img{
+
+    width:100%;
 
     border-radius:28px;
 
@@ -315,35 +364,49 @@ HERO
 
 .floating-card{
 
-    position:absolute;
+    width:100%;
 
-    right:-20px;
-
-    bottom:-30px;
-
-    width:320px;
+    margin-top:24px;
 
     background:rgba(10,18,30,.95);
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:20px;
+    border-radius:22px;
 
-    padding:28px;
+    padding:32px;
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.28);
 
 }
 
 .floating-card h3{
 
-    margin-bottom:18px;
+    margin-bottom:22px;
+
+    font-size:26px;
+
+}
+
+.floating-card ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
 
 }
 
 .floating-card li{
 
-    margin-bottom:12px;
-
     color:#c8d6e3;
+
+    font-size:18px;
+
+    line-height:1.6;
 
 }
 
@@ -1216,5 +1279,28 @@ MENU MOBILE
     .lb-actions .btn-whatsapp{
         display:none;
     }
+
+}
+/*==========================================
+SCROLL REVEAL
+==========================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }

@@ -33,36 +33,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="lb-logo">
 
-			<a href="<?php echo esc_url( home_url('/') ); ?>">
+    <a href="<?php echo esc_url( home_url('/') ); ?>">
 
-				<img
-					src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.png"
-					alt="<?php bloginfo('name'); ?>">
+        <img
+            src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.png"
+            alt="<?php bloginfo('name'); ?>">
 
-			</a>
+    </a>
 
-		</div>
+</div>
 
 		<nav class="lb-menu">
 
-			<ul>
+    <?php
+    wp_nav_menu([
+        'theme_location' => 'primary',
+        'container'      => false,
+        'menu_class'     => '',
+        'fallback_cb'    => false,
+    ]);
+    ?>
 
-				<li><a href="#servicos">Serviços</a></li>
-
-				<li><a href="#processo">Processo</a></li>
-
-				<li><a href="#laboratorio">Laboratório</a></li>
-
-				<li><a href="#contato">Contato</a></li>
-
-			</ul>
-
-		</nav>
+</nav>
 
 		<div class="lb-actions">
 
 			<a
-				class="btn-whatsapp"
+				class="btn btn-whatsapp"
 				href="https://wa.me/5511970827003"
 				target="_blank"
 				rel="noopener">
