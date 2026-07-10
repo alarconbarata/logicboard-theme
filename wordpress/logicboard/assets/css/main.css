@@ -1174,6 +1174,45 @@ border:0;
 
 }
 /*======================================
+FORMULÁRIO - MENSAGENS
+======================================*/
+
+.form-success{
+
+    background:#143b22;
+
+    color:#9cf5b7;
+
+    border:1px solid #2ecc71;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    margin-bottom:24px;
+
+    font-weight:600;
+
+}
+
+.form-error{
+
+    background:#421616;
+
+    color:#ffb3b3;
+
+    border:1px solid #ff4d4d;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    margin-bottom:24px;
+
+    font-weight:600;
+
+}
+/*======================================
 MAPA
 ======================================*/
 

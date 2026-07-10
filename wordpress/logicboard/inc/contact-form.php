@@ -49,17 +49,23 @@ $sent = wp_mail($to, $subject, $body, $headers);
 
 if ($sent) {
 
-    wp_die(
-        '<h2>Mensagem enviada com sucesso!</h2>
-        <p>Obrigado pelo contato. Em breve retornaremos.</p>'
+    wp_redirect(
+        add_query_arg(
+            'status',
+            'success',
+            home_url('/#contato')
+        )
     );
+
+    exit;
 
 } else {
 
-    wp_die(
-        '<h2>Erro ao enviar.</h2>
-        <p>Não foi possível enviar a mensagem.</p>'
-    );
+    wp_redirect(
+    home_url('/?status=success#contato')
+);
+
+exit;
 
 }
 }

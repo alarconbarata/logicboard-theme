@@ -60,7 +60,28 @@ if (!defined('ABSPATH')) {
             </div>
 
             <div class="contact-form">
+               
+<?php if (isset($_GET['status']) && $_GET['status'] === 'success') : ?>
 
+    <div class="form-success">
+
+        ✓ Sua solicitação foi enviada com sucesso.
+        Entraremos em contato em breve.
+
+    </div>
+
+<?php endif; ?>
+
+<?php if (isset($_GET['status']) && $_GET['status'] === 'error') : ?>
+
+    <div class="form-error">
+
+        Não foi possível enviar sua solicitação.
+        Tente novamente.
+
+    </div>
+
+<?php endif; ?>
                 <form
     method="post"
     action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
