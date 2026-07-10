@@ -61,33 +61,50 @@ if (!defined('ABSPATH')) {
 
             <div class="contact-form">
 
-                <form>
+                <form
+    method="post"
+    action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
 
-                    <input
-                        type="text"
-                        placeholder="Nome">
+    <?php wp_nonce_field('logicboard_contact', 'logicboard_nonce'); ?>
 
-                    <input
-                        type="email"
-                        placeholder="E-mail">
+    <input
+        type="hidden"
+        name="action"
+        value="logicboard_contact">
 
-                    <input
-                        type="text"
-                        placeholder="Telefone">
+    <input
+        type="text"
+        name="name"
+        placeholder="Nome"
+        required>
 
-                    <textarea
-                        rows="6"
-                        placeholder="Descreva o problema do seu MacBook"></textarea>
+    <input
+        type="email"
+        name="email"
+        placeholder="E-mail"
+        required>
 
-                    <button
-                        class="btn btn-primary"
-                        type="submit">
+    <input
+        type="text"
+        name="phone"
+        placeholder="Telefone"
+        required>
 
-                        Solicitar orçamento
+    <textarea
+        name="message"
+        rows="6"
+        placeholder="Descreva o problema do seu MacBook"
+        required></textarea>
 
-                    </button>
+    <button
+        class="btn btn-primary"
+        type="submit">
 
-                </form>
+        Solicitar orçamento
+
+    </button>
+
+</form>
 
             </div>
 
