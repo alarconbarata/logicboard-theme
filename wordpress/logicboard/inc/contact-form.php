@@ -42,10 +42,48 @@ $body .= "{$message}\n";
 
 $headers = [
     'Content-Type: text/plain; charset=UTF-8',
+    'From: LogicBoard Specialists <' . logicboard_get_email() . '>',
     'Reply-To: ' . $name . ' <' . $email . '>',
 ];
 
 $sent = wp_mail($to, $subject, $body, $headers);
+/*
+|--------------------------------------------------------------------------
+| E-mail de confirmação para o cliente
+|--------------------------------------------------------------------------
+*/
+
+$client_subject = 'Recebemos sua solicitação de orçamento';
+
+$client_body = "
+
+Olá {$name},
+
+Recebemos sua solicitação de orçamento com sucesso.
+
+Nossa equipe especializada analisará as informações e retornará o mais breve possível.
+
+Caso prefira atendimento imediato, fale conosco pelo WhatsApp:
+
+" . logicboard_get_phone() . "
+
+Atenciosamente,
+
+LogicBoard Specialists
+https://logicboard.com.br
+
+";
+
+wp_mail(
+    $email,
+    $client_subject,
+    $client_body,
+    [
+        'Content-Type: text/plain; charset=UTF-8',
+        'From: LogicBoard Specialists <' . logicboard_get_email() . '>',
+        'Reply-To: ' . logicboard_get_email()
+    ]
+);
 
 if ($sent) {
 

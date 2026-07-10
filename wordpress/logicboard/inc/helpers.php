@@ -17,6 +17,12 @@ function logicboard_get_option($key, $default = '')
     return $options[$key] ?? $default;
 }
 
+/*
+|--------------------------------------------------------------------------
+| Empresa
+|--------------------------------------------------------------------------
+*/
+
 function logicboard_get_whatsapp()
 {
     return logicboard_get_option('whatsapp');
@@ -59,13 +65,21 @@ function logicboard_get_linkedin()
     return logicboard_get_option('linkedin');
 }
 
+/*
+|--------------------------------------------------------------------------
+| Endereço
+|--------------------------------------------------------------------------
+*/
+
 function logicboard_get_full_address()
 {
     $lines = [];
 
     $address = trim(
         logicboard_get_option('address') .
-        (logicboard_get_option('number') ? ', ' . logicboard_get_option('number') : '')
+        (logicboard_get_option('number')
+            ? ', ' . logicboard_get_option('number')
+            : '')
     );
 
     if ($address) {
@@ -99,4 +113,26 @@ function logicboard_get_full_address()
     }
 
     return implode('<br>', $lines);
-}">
+}
+
+/*
+|--------------------------------------------------------------------------
+| Hero
+|--------------------------------------------------------------------------
+*/
+
+function logicboard_get_hero_title()
+{
+    return logicboard_get_option(
+        'hero_title',
+        'Reparo avançado de placas lógicas para MacBook'
+    );
+}
+
+function logicboard_get_hero_subtitle()
+{
+    return logicboard_get_option(
+        'hero_subtitle',
+        'Recuperamos placas lógicas de MacBooks Intel, T2 e Apple Silicon (M1, M2, M3 e M4) utilizando microscopia eletrônica, equipamentos profissionais e técnicas avançadas de microsolda.'
+    );
+}

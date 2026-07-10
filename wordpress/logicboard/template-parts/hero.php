@@ -13,20 +13,18 @@ if (!defined('ABSPATH')) {
         <div class="hero-content">
 
             <span class="hero-badge">
-                Especialistas em Logic Board Apple
-            </span>
+    Especialistas em Logic Board Apple
+</span>
 
-            <h1>
-                Reparo avançado de placas lógicas para MacBook
-            </h1>
+<h1>
+    <?php echo esc_html( logicboard_get_hero_title() ); ?>
+</h1>
 
-            <p>
+<p>
 
-                Recuperamos placas lógicas de MacBooks Intel, T2 e Apple Silicon
-                (M1, M2, M3 e M4) utilizando microscopia eletrônica,
-                equipamentos profissionais e técnicas avançadas de microsolda.
+    <?php echo esc_html( logicboard_get_hero_subtitle() ); ?>
 
-            </p>
+</p>
 
             <div class="hero-buttons">
 
