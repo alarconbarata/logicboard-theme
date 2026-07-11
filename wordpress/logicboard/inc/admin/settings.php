@@ -83,17 +83,30 @@ function logicboard_register_settings()
     );
 
     logicboard_add_field('hero_badge', 'Badge', 'logicboard_hero');
-logicboard_add_field('hero_title', 'Título Principal', 'logicboard_hero');
-logicboard_add_field('hero_subtitle', 'Subtítulo', 'logicboard_hero');
+    logicboard_add_field('hero_title', 'Título Principal', 'logicboard_hero');
+    logicboard_add_field('hero_subtitle', 'Subtítulo', 'logicboard_hero');
+    logicboard_add_field('hero_image', 'Imagem da Hero', 'logicboard_hero');
+    logicboard_add_field('hero_button_1_text', 'Texto do Botão Principal', 'logicboard_hero');
+    logicboard_add_field('hero_button_1_url', 'Link do Botão Principal', 'logicboard_hero');
+    logicboard_add_field('hero_button_2_text', 'Texto do Botão Secundário', 'logicboard_hero');
+    logicboard_add_field('hero_button_2_url', 'Link do Botão Secundário', 'logicboard_hero');
 
-logicboard_add_field('hero_image', 'Imagem da Hero', 'logicboard_hero');
+    /*
+    |--------------------------------------------------------------------------
+    | Services
+    |--------------------------------------------------------------------------
+    */
 
-logicboard_add_field('hero_button_1_text', 'Texto do Botão Principal', 'logicboard_hero');
-logicboard_add_field('hero_button_1_url', 'Link do Botão Principal', 'logicboard_hero');
+    add_settings_section(
+        'logicboard_services',
+        'Serviços',
+        '__return_false',
+        'logicboard'
+    );
 
-logicboard_add_field('hero_button_2_text', 'Texto do Botão Secundário', 'logicboard_hero');
-logicboard_add_field('hero_button_2_url', 'Link do Botão Secundário', 'logicboard_hero');
-
+    logicboard_add_field('services_badge', 'Badge', 'logicboard_services');
+    logicboard_add_field('services_title', 'Título da Seção', 'logicboard_services');
+    logicboard_add_field('services_subtitle', 'Subtítulo', 'logicboard_services');
 }
 
 function logicboard_add_field(
@@ -117,7 +130,6 @@ function logicboard_add_field(
 function logicboard_text_callback($args)
 {
     $options = get_option('logicboard_options');
-
     ?>
 
     <input

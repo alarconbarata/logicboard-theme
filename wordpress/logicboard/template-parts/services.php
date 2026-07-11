@@ -10,17 +10,20 @@ if (!defined('ABSPATH')) {
 
         <div class="section-title">
 
-            <span>Nossos Serviços</span>
+    <span>
+        <?php echo esc_html( logicboard_get_services_badge() ); ?>
+    </span>
 
-            <h2>Soluções avançadas para placas lógicas Apple</h2>
+    <h2>
+        <?php echo esc_html( logicboard_get_services_title() ); ?>
+    </h2>
 
-            <p>
-                Trabalhamos exclusivamente com reparos eletrônicos de alta precisão,
-                utilizando equipamentos profissionais e técnicas avançadas de microsolda.
-            </p>
+    <p>
+        <?php echo esc_html( logicboard_get_services_subtitle() ); ?>
+    </p>
 
-        </div>
-
+</div>
+        
         <div class="services-grid">
 
             <article class="service-card">

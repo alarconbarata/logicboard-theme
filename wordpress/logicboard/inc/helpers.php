@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
 
 /*
 |--------------------------------------------------------------------------
-| HELPERS
+| Função base
 |--------------------------------------------------------------------------
 */
 
@@ -26,166 +26,17 @@ function logicboard_get_option($key, $default = '')
 
 /*
 |--------------------------------------------------------------------------
-| Empresa
+| Carrega os Helpers
 |--------------------------------------------------------------------------
 */
 
-function logicboard_get_whatsapp()
-{
-    return logicboard_get_option('whatsapp');
-}
-
-function logicboard_get_whatsapp_url()
-{
-    $number = preg_replace('/\D/', '', logicboard_get_whatsapp());
-
-    return 'https://wa.me/' . $number;
-}
-
-function logicboard_get_phone()
-{
-    return logicboard_get_option('phone');
-}
-
-function logicboard_get_email()
-{
-    return logicboard_get_option('email');
-}
-
-function logicboard_get_hours()
-{
-    return logicboard_get_option('hours');
-}
-
-function logicboard_get_maps()
-{
-    return logicboard_get_option('maps');
-}
-
-function logicboard_get_instagram()
-{
-    return logicboard_get_option('instagram');
-}
-
-function logicboard_get_linkedin()
-{
-    return logicboard_get_option('linkedin');
-}
-
-/*
-|--------------------------------------------------------------------------
-| Endereço
-|--------------------------------------------------------------------------
-*/
-
-function logicboard_get_full_address()
-{
-    $lines = [];
-
-    $address = trim(
-        logicboard_get_option('address') .
-        (logicboard_get_option('number')
-            ? ', ' . logicboard_get_option('number')
-            : '')
-    );
-
-    if ($address) {
-        $lines[] = $address;
-    }
-
-    if (logicboard_get_option('complement')) {
-        $lines[] = logicboard_get_option('complement');
-    }
-
-    $location = [];
-
-    if (logicboard_get_option('district')) {
-        $location[] = logicboard_get_option('district');
-    }
-
-    if (logicboard_get_option('city')) {
-        $location[] = logicboard_get_option('city');
-    }
-
-    if (logicboard_get_option('state')) {
-        $location[] = logicboard_get_option('state');
-    }
-
-    if (!empty($location)) {
-        $lines[] = implode(' - ', $location);
-    }
-
-    if (logicboard_get_option('zipcode')) {
-        $lines[] = 'CEP ' . logicboard_get_option('zipcode');
-    }
-
-    return implode('<br>', $lines);
-}
-
-/*
-|--------------------------------------------------------------------------
-| Hero
-|--------------------------------------------------------------------------
-*/
-
-function logicboard_get_hero_title()
-{
-    return logicboard_get_option(
-        'hero_title',
-        'Reparo avançado de placas lógicas para MacBook'
-    );
-}
-
-function logicboard_get_hero_subtitle()
-{
-    return logicboard_get_option(
-        'hero_subtitle',
-        'Recuperamos placas lógicas de MacBooks Intel, T2 e Apple Silicon (M1, M2, M3 e M4) utilizando microscopia eletrônica, equipamentos profissionais e técnicas avançadas de microsolda.'
-    );
-}
-function logicboard_get_hero_badge()
-{
-    return logicboard_get_option(
-        'hero_badge',
-        'Especialistas em Logic Board Apple'
-    );
-}
-
-function logicboard_get_hero_button_1_text()
-{
-    return logicboard_get_option(
-        'hero_button_1_text',
-        'Solicitar orçamento'
-    );
-}
-
-function logicboard_get_hero_button_1_url()
-{
-    return logicboard_get_option(
-        'hero_button_1_url',
-        logicboard_get_whatsapp_url()
-    );
-}
-
-function logicboard_get_hero_button_2_text()
-{
-    return logicboard_get_option(
-        'hero_button_2_text',
-        'Conhecer serviços'
-    );
-}
-
-function logicboard_get_hero_button_2_url()
-{
-    return logicboard_get_option(
-        'hero_button_2_url',
-        '#servicos'
-    );
-}
-function logicboard_get_hero_image()
-{
-    return logicboard_get_option(
-        'hero_image',
-        get_template_directory_uri() . '/assets/img/hero-board.webp'
-    );
-}
+require_once __DIR__ . '/helpers/company.php';
+require_once __DIR__ . '/helpers/address.php';
+require_once __DIR__ . '/helpers/hero.php';
+require_once __DIR__ . '/helpers/services.php';
+require_once __DIR__ . '/helpers/process.php';
+require_once __DIR__ . '/helpers/differentials.php';
+require_once __DIR__ . '/helpers/laboratory.php';
+require_once __DIR__ . '/helpers/faq.php';
+require_once __DIR__ . '/helpers/cta.php';
+require_once __DIR__ . '/helpers/footer.php';
