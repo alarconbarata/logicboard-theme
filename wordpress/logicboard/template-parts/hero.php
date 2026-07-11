@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
         <div class="hero-content">
 
             <span class="hero-badge">
-    Especialistas em Logic Board Apple
+    <?php echo esc_html( logicboard_get_hero_badge() ); ?>
 </span>
 
 <h1>
@@ -29,21 +29,22 @@ if (!defined('ABSPATH')) {
             <div class="hero-buttons">
 
                 <a
-                    class="btn btn-primary"
-                    href="https://wa.me/5511970827003"
-                    target="_blank">
+    class="btn btn-primary"
+    href="<?php echo esc_url( logicboard_get_hero_button_1_url() ); ?>"
+    target="_blank"
+    rel="noopener">
 
-                    Solicitar orçamento
+    <?php echo esc_html( logicboard_get_hero_button_1_text() ); ?>
 
-                </a>
+</a>
 
                 <a
-                    class="btn btn-outline"
-                    href="#servicos">
+    class="btn btn-outline"
+    href="<?php echo esc_url( logicboard_get_hero_button_2_url() ); ?>">
 
-                    Conhecer serviços
+    <?php echo esc_html( logicboard_get_hero_button_2_text() ); ?>
 
-                </a>
+</a>
 
             </div>
 
