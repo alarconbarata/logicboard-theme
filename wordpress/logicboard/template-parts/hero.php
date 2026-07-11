@@ -89,8 +89,8 @@ if (!defined('ABSPATH')) {
         <div class="hero-media">
 
             <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-board.webp"
-                alt="Laboratório LogicBoard">
+    src="<?php echo esc_url( logicboard_get_hero_image() ); ?>"
+    alt="Laboratório LogicBoard">
 
             <div class="floating-card">
 

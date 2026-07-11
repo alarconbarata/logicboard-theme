@@ -12,9 +12,16 @@ if (!defined('ABSPATH')) {
 
 function logicboard_get_option($key, $default = '')
 {
-    $options = get_option('logicboard_options');
+    $options = get_option('logicboard_options', []);
 
-    return $options[$key] ?? $default;
+    if (
+        !isset($options[$key]) ||
+        trim((string) $options[$key]) === ''
+    ) {
+        return $default;
+    }
+
+    return $options[$key];
 }
 
 /*
@@ -173,5 +180,12 @@ function logicboard_get_hero_button_2_url()
     return logicboard_get_option(
         'hero_button_2_url',
         '#servicos'
+    );
+}
+function logicboard_get_hero_image()
+{
+    return logicboard_get_option(
+        'hero_image',
+        get_template_directory_uri() . '/assets/img/hero-board.webp'
     );
 }
