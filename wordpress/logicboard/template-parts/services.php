@@ -26,79 +26,31 @@ if (!defined('ABSPATH')) {
         
         <div class="services-grid">
 
-            <article class="service-card">
+<?php for ($i = 1; $i <= 6; $i++) :
 
-                <div class="service-icon">🔬</div>
+    $service = logicboard_get_service($i);
 
-                <h3>Microsolda</h3>
+?>
 
-                <p>
-                    Reparo em componentes SMD, BGA e trilhas utilizando microscopia profissional.
-                </p>
+    <article class="service-card">
 
-            </article>
-
-            <article class="service-card">
-
-                <div class="service-icon">💻</div>
-
-                <h3>Apple Silicon</h3>
-
-                <p>
-                    Diagnóstico e reparo de MacBooks M1, M2, M3 e M4.
-                </p>
-
-            </article>
-
-            <article class="service-card">
-
-                <div class="service-icon">⚡</div>
-
-                <h3>Chip T2</h3>
-
-                <p>
-                    Correção de falhas relacionadas ao chip de segurança Apple T2.
-                </p>
-
-            </article>
-
-            <article class="service-card">
-
-                <div class="service-icon">💾</div>
-
-                <h3>Upgrade SSD</h3>
-
-                <p>
-                    Expansão de armazenamento com instalação e configuração.
-                </p>
-
-            </article>
-
-            <article class="service-card">
-
-                <div class="service-icon">💧</div>
-
-                <h3>Oxidação</h3>
-
-                <p>
-                    Recuperação de placas afetadas por líquidos e corrosão.
-                </p>
-
-            </article>
-
-            <article class="service-card">
-
-                <div class="service-icon">📈</div>
-
-                <h3>Diagnóstico</h3>
-
-                <p>
-                    Análise eletrônica completa para identificação precisa da falha.
-                </p>
-
-            </article>
-
+        <div class="service-icon">
+            <?php echo esc_html($service['icon']); ?>
         </div>
+
+        <h3>
+            <?php echo esc_html($service['title']); ?>
+        </h3>
+
+        <p>
+            <?php echo esc_html($service['description']); ?>
+        </p>
+
+    </article>
+
+<?php endfor; ?>
+
+</div>
 
     </div>
 

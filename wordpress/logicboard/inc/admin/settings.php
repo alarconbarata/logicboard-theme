@@ -91,22 +91,64 @@ function logicboard_register_settings()
     logicboard_add_field('hero_button_2_text', 'Texto do Botão Secundário', 'logicboard_hero');
     logicboard_add_field('hero_button_2_url', 'Link do Botão Secundário', 'logicboard_hero');
 
-    /*
-    |--------------------------------------------------------------------------
-    | Services
-    |--------------------------------------------------------------------------
-    */
+/*
+|--------------------------------------------------------------------------
+| Serviços
+|--------------------------------------------------------------------------
+*/
 
-    add_settings_section(
-        'logicboard_services',
-        'Serviços',
-        '__return_false',
-        'logicboard'
+add_settings_section(
+    'logicboard_services',
+    '🛠 Serviços',
+    '__return_false',
+    'logicboard'
+);
+
+logicboard_add_field(
+    'services_badge',
+    'Badge',
+    'logicboard_services'
+);
+
+logicboard_add_field(
+    'services_title',
+    'Título da Seção',
+    'logicboard_services'
+);
+
+logicboard_add_field(
+    'services_subtitle',
+    'Subtítulo',
+    'logicboard_services'
+);
+
+/*
+|--------------------------------------------------------------------------
+| Cards dos Serviços
+|--------------------------------------------------------------------------
+*/
+
+for ($i = 1; $i <= 6; $i++) {
+
+    logicboard_add_field(
+        "service_{$i}_icon",
+        "Serviço {$i} - Ícone",
+        'logicboard_services'
     );
 
-    logicboard_add_field('services_badge', 'Badge', 'logicboard_services');
-    logicboard_add_field('services_title', 'Título da Seção', 'logicboard_services');
-    logicboard_add_field('services_subtitle', 'Subtítulo', 'logicboard_services');
+    logicboard_add_field(
+        "service_{$i}_title",
+        "Serviço {$i} - Título",
+        'logicboard_services'
+    );
+
+    logicboard_add_field(
+        "service_{$i}_description",
+        "Serviço {$i} - Descrição",
+        'logicboard_services'
+    );
+
+}
 }
 
 function logicboard_add_field(
