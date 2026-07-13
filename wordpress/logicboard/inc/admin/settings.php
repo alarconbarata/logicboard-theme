@@ -146,6 +146,66 @@ logicboard_add_field(
     'Subtítulo',
     'logicboard_services'
 );
+/*
+|--------------------------------------------------------------------------
+| Processo
+|--------------------------------------------------------------------------
+*/
+
+add_settings_section(
+    'logicboard_process',
+    '⚙ Processo',
+    '__return_false',
+    'logicboard'
+);
+
+logicboard_add_field(
+    'process_badge',
+    'Badge',
+    'logicboard_process'
+);
+
+logicboard_add_field(
+    'process_title',
+    'Título da Seção',
+    'logicboard_process'
+);
+
+logicboard_add_field(
+    'process_subtitle',
+    'Subtítulo',
+    'logicboard_process',
+    'textarea'
+);
+
+/*
+|--------------------------------------------------------------------------
+| Passos do Processo
+|--------------------------------------------------------------------------
+*/
+
+for ($i = 1; $i <= 4; $i++) {
+
+    logicboard_add_field(
+        "process_{$i}_number",
+        "Passo {$i} - Número",
+        'logicboard_process'
+    );
+
+    logicboard_add_field(
+        "process_{$i}_title",
+        "Passo {$i} - Título",
+        'logicboard_process'
+    );
+
+    logicboard_add_field(
+        "process_{$i}_description",
+        "Passo {$i} - Descrição",
+        'logicboard_process',
+        'textarea'
+    );
+
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -314,3 +374,4 @@ break;
             break;
     }
 }
+
