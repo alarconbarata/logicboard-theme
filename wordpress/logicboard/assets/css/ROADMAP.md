@@ -6,15 +6,15 @@
 - [x] Serviços administráveis
 - [x] Processo administrável
 - [x] Diferenciais administráveis
+- [x] Laboratório administrável
+- [x] FAQ administrável
 
 ### Em andamento
 
-- [ ] Laboratório administrável
+- [ ] CTA administrável
 
 ### Próximas etapas
 
-- [ ] FAQ
-- [ ] CTA
-- [ ] Footer
-- [ ] Refatoração Geral (RC3.0)
+- [ ] Footer administrável
+- [ ] RC3.0 - Refatoração Geral
 - [ ] Versão 1.0.0

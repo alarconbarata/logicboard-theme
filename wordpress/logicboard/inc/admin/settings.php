@@ -208,6 +208,96 @@ logicboard_add_field(
     'logicboard_differentials',
     'textarea'
 );
+/*
+|--------------------------------------------------------------------------
+| Laboratório
+|--------------------------------------------------------------------------
+*/
+
+add_settings_section(
+    'logicboard_laboratory',
+    '🧪 Laboratório',
+    '__return_false',
+    'logicboard'
+);
+
+logicboard_add_field(
+    'laboratory_badge',
+    'Badge',
+    'logicboard_laboratory'
+);
+
+logicboard_add_field(
+    'laboratory_title',
+    'Título da Seção',
+    'logicboard_laboratory'
+);
+
+logicboard_add_field(
+    'laboratory_subtitle',
+    'Subtítulo',
+    'logicboard_laboratory',
+    'textarea'
+);
+
+for ($i = 1; $i <= 4; $i++) {
+
+    logicboard_add_field(
+        "laboratory_image_{$i}",
+        "Imagem {$i}",
+        'logicboard_laboratory',
+        'media'
+    );
+
+}
+/*
+|--------------------------------------------------------------------------
+| FAQ
+|--------------------------------------------------------------------------
+*/
+
+add_settings_section(
+    'logicboard_faq',
+    '❓ FAQ',
+    '__return_false',
+    'logicboard'
+);
+
+logicboard_add_field(
+    'faq_badge',
+    'Badge',
+    'logicboard_faq'
+);
+
+logicboard_add_field(
+    'faq_title',
+    'Título da Seção',
+    'logicboard_faq'
+);
+
+logicboard_add_field(
+    'faq_subtitle',
+    'Subtítulo',
+    'logicboard_faq',
+    'textarea'
+);
+
+for ($i = 1; $i <= 6; $i++) {
+
+    logicboard_add_field(
+        "faq_{$i}_question",
+        "Pergunta {$i}",
+        'logicboard_faq'
+    );
+
+    logicboard_add_field(
+        "faq_{$i}_answer",
+        "Resposta {$i}",
+        'logicboard_faq',
+        'textarea'
+    );
+
+}
 
 /*
 |--------------------------------------------------------------------------

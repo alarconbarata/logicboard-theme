@@ -4,6 +4,22 @@ Todas as alterações importantes deste projeto serão documentadas neste arquiv
 
 O formato segue o padrão **Keep a Changelog** adaptado para o desenvolvimento do tema LogicBoard.
 
+## RC2.4 - FAQ totalmente administrável
+
+### Added
+- Seção FAQ administrável.
+- Helper `faq.php`.
+- Cadastro de até seis perguntas e respostas.
+
+### Changed
+- Template `template-parts/faq.php` atualizado para utilizar conteúdo dinâmico.
+
+### Improved
+- Perguntas sem conteúdo não são exibidas.
+- Mantida compatibilidade com o accordion existente.
+
+---
+
 ## RC2.2 - Diferenciais totalmente administráveis
 
 ### Added

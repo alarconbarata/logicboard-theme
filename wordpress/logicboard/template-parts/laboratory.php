@@ -1,5 +1,5 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 ?>
@@ -10,34 +10,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <div class="section-title">
 
-            <span>Nosso Laboratório</span>
+            <span>
+                <?php echo esc_html(logicboard_get_laboratory_badge()); ?>
+            </span>
 
-            <h2>Estrutura profissional para reparos eletrônicos</h2>
+            <h2>
+                <?php echo esc_html(logicboard_get_laboratory_title()); ?>
+            </h2>
 
             <p>
-                Equipamentos de alta precisão, microscopia profissional e
-                ferramentas especializadas para reparo de placas lógicas Apple.
+                <?php echo esc_html(logicboard_get_laboratory_subtitle()); ?>
             </p>
 
         </div>
 
         <div class="lab-grid">
 
-            <figure class="lab-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lab-01.webp" alt="Microscópio profissional">
-            </figure>
+            <?php for ($i = 1; $i <= 4; $i++) : ?>
 
-            <figure class="lab-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lab-02.webp" alt="Estação de microsolda">
-            </figure>
+                <figure class="lab-item">
 
-            <figure class="lab-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lab-03.webp" alt="Placa lógica Apple">
-            </figure>
+                    <img
+                        src="<?php echo esc_url(logicboard_get_laboratory_image($i)); ?>"
+                        alt="<?php echo esc_attr('Imagem do laboratório ' . $i); ?>">
 
-            <figure class="lab-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lab-04.webp" alt="Bancada técnica">
-            </figure>
+                </figure>
+
+            <?php endfor; ?>
 
         </div>
 
