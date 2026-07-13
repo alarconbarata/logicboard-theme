@@ -9,12 +9,12 @@
 - [x] Laboratório administrável
 - [x] FAQ administrável
 - [x] CTA administrável
+- [x] Footer administrável
 
-### Em andamento
+### Próxima versão
 
-- [ ] Footer administrável
+- [ ] RC3.0 - Auditoria e Refatoração Geral
 
-### Próximas etapas
+### Futuro
 
-- [ ] RC3.0 - Refatoração Geral
-- [ ] Versão 1.0.0
+- [ ] v1.0.0

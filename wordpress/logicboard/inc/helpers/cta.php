@@ -1,50 +1,67 @@
 <?php
+
 if (!defined('ABSPATH')) {
     exit;
 }
-?>
 
-<section class="cta reveal">
+/*
+|--------------------------------------------------------------------------
+| CTA
+|--------------------------------------------------------------------------
+*/
 
-    <div class="lb-container">
+function logicboard_get_cta_badge()
+{
+    return logicboard_get_option(
+        'cta_badge',
+        'LogicBoard Specialists'
+    );
+}
 
-        <div class="cta-box">
+function logicboard_get_cta_title()
+{
+    return logicboard_get_option(
+        'cta_title',
+        'Seu MacBook merece um reparo profissional.'
+    );
+}
 
-            <span class="cta-badge">
-                <?php echo esc_html(logicboard_get_cta_badge()); ?>
-            </span>
+function logicboard_get_cta_text()
+{
+    return logicboard_get_option(
+        'cta_text',
+        'Somos especialistas em reparo de placas lógicas Apple. Trabalhamos com equipamentos de alta precisão, garantia de 6 meses e atendimento especializado.'
+    );
+}
 
-            <h2>
-                <?php echo esc_html(logicboard_get_cta_title()); ?>
-            </h2>
+function logicboard_get_cta_button_1_text()
+{
+    return logicboard_get_option(
+        'cta_button_1_text',
+        'Solicitar orçamento'
+    );
+}
 
-            <p>
-                <?php echo esc_html(logicboard_get_cta_text()); ?>
-            </p>
+function logicboard_get_cta_button_1_url()
+{
+    return logicboard_get_option(
+        'cta_button_1_url',
+        logicboard_get_whatsapp_url()
+    );
+}
 
-            <div class="cta-buttons">
+function logicboard_get_cta_button_2_text()
+{
+    return logicboard_get_option(
+        'cta_button_2_text',
+        'Falar com um especialista'
+    );
+}
 
-                <a
-                    href="<?php echo esc_url(logicboard_get_cta_button_1_url()); ?>"
-                    target="_blank"
-                    class="btn btn-primary">
-
-                    <?php echo esc_html(logicboard_get_cta_button_1_text()); ?>
-
-                </a>
-
-                <a
-                    href="<?php echo esc_url(logicboard_get_cta_button_2_url()); ?>"
-                    class="btn btn-outline">
-
-                    <?php echo esc_html(logicboard_get_cta_button_2_text()); ?>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+function logicboard_get_cta_button_2_url()
+{
+    return logicboard_get_option(
+        'cta_button_2_url',
+        '#contato'
+    );
+}

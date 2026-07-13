@@ -298,6 +298,93 @@ for ($i = 1; $i <= 6; $i++) {
     );
 
 }
+/*
+|--------------------------------------------------------------------------
+| CTA
+|--------------------------------------------------------------------------
+*/
+
+add_settings_section(
+    'logicboard_cta',
+    '📢 CTA',
+    '__return_false',
+    'logicboard'
+);
+
+logicboard_add_field(
+    'cta_badge',
+    'Badge',
+    'logicboard_cta'
+);
+
+logicboard_add_field(
+    'cta_title',
+    'Título',
+    'logicboard_cta'
+);
+
+logicboard_add_field(
+    'cta_text',
+    'Texto',
+    'logicboard_cta',
+    'textarea'
+);
+
+logicboard_add_field(
+    'cta_button_1_text',
+    'Texto do Botão Principal',
+    'logicboard_cta'
+);
+
+logicboard_add_field(
+    'cta_button_1_url',
+    'Link do Botão Principal',
+    'logicboard_cta'
+);
+
+logicboard_add_field(
+    'cta_button_2_text',
+    'Texto do Botão Secundário',
+    'logicboard_cta'
+);
+
+logicboard_add_field(
+    'cta_button_2_url',
+    'Link do Botão Secundário',
+    'logicboard_cta'
+);
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+add_settings_section(
+    'logicboard_footer',
+    '🦶 Footer',
+    '__return_false',
+    'logicboard'
+);
+
+logicboard_add_field(
+    'footer_text',
+    'Texto Institucional',
+    'logicboard_footer',
+    'textarea'
+);
+
+logicboard_add_field(
+    'footer_warranty',
+    'Texto da Garantia',
+    'logicboard_footer',
+    'textarea'
+);
+
+logicboard_add_field(
+    'footer_copyright',
+    'Copyright',
+    'logicboard_footer'
+);
 
 /*
 |--------------------------------------------------------------------------

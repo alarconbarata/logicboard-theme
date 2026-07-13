@@ -1,5 +1,5 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 ?>
@@ -11,41 +11,37 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="cta-box">
 
             <span class="cta-badge">
-                LogicBoard Specialists
+                <?php echo esc_html(logicboard_get_cta_badge()); ?>
             </span>
 
             <h2>
-                Seu MacBook merece um reparo profissional.
+                <?php echo esc_html(logicboard_get_cta_title()); ?>
             </h2>
 
             <p>
-
-                Somos especialistas em reparo de placas lógicas Apple.
-                Trabalhamos com equipamentos de alta precisão,
-                garantia de 6 meses e atendimento especializado.
-
+                <?php echo esc_html(logicboard_get_cta_text()); ?>
             </p>
 
             <div class="cta-buttons">
 
-    <a
-        href="<?php echo esc_url( logicboard_get_whatsapp_url() ); ?>"
-        target="_blank"
-        class="btn btn-primary">
+                <a
+                    href="<?php echo esc_url(logicboard_get_cta_button_1_url()); ?>"
+                    target="_blank"
+                    class="btn btn-primary">
 
-        Solicitar orçamento
+                    <?php echo esc_html(logicboard_get_cta_button_1_text()); ?>
 
-    </a>
+                </a>
 
-    <a
-        href="#contato"
-        class="btn btn-outline">
+                <a
+                    href="<?php echo esc_url(logicboard_get_cta_button_2_url()); ?>"
+                    class="btn btn-outline">
 
-        Falar com um especialista
+                    <?php echo esc_html(logicboard_get_cta_button_2_text()); ?>
 
-    </a>
+                </a>
 
-</div>
+            </div>
 
         </div>
 

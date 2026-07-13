@@ -4,6 +4,21 @@ Todas as alterações importantes deste projeto serão documentadas neste arquiv
 
 O formato segue o padrão **Keep a Changelog** adaptado para o desenvolvimento do tema LogicBoard.
 
+## RC2.6 - Footer totalmente administrável
+
+### Added
+- Seção Footer administrável.
+- Helper `footer.php`.
+
+### Changed
+- Footer atualizado para utilizar dados dinâmicos.
+
+### Improved
+- Reutilização dos dados da seção Empresa.
+- Endereço exibido através do helper centralizado.
+
+---
+
 ## RC2.5 - CTA totalmente administrável
 
 ### Added

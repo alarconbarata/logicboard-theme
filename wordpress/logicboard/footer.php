@@ -1,84 +1,77 @@
+<?php
+if (!defined('ABSPATH')) {
+    exit;
+}
+?>
+
 <footer class="lb-footer" id="contato">
 
-<div class="lb-container">
+    <div class="lb-container">
 
-<div class="footer-grid">
+        <div class="footer-grid">
 
-<div>
+            <div>
 
-<img
-src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"
-class="footer-logo"
-alt="LogicBoard">
+                <img
+                    src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo.png'); ?>"
+                    class="footer-logo"
+                    alt="LogicBoard">
 
-<p>
+                <p>
+                    <?php echo esc_html(logicboard_get_footer_text()); ?>
+                </p>
 
-Especialistas em reparo avançado
-de placas lógicas Apple.
+            </div>
 
-</p>
+            <div>
 
-</div>
+                <h3>Contato</h3>
 
-<div>
+                <p>
+                    <?php echo esc_html(logicboard_get_phone()); ?>
+                </p>
 
-<h3>Contato</h3>
+                <p>
+                    <?php echo esc_html(logicboard_get_email()); ?>
+                </p>
 
-<p>(11) 97082-7003</p>
+                <p>
+                    <?php echo wp_kses_post(logicboard_get_full_address()); ?>
+                </p>
 
-<p>contato@logicboard.com.br</p>
+                <p>
+                    <?php echo nl2br(esc_html(logicboard_get_hours())); ?>
+                </p>
 
-<p>
+            </div>
 
-Alameda Madeira, 258 – Sala 902<br>
+            <div>
 
-Alphaville – Barueri/SP
+                <h3>Garantia</h3>
 
-</p>
+                <p>
+                    <?php echo esc_html(logicboard_get_footer_warranty()); ?>
+                </p>
 
-<p>
+            </div>
 
-Segunda a sexta<br>
+        </div>
 
-09h às 18h
+        <hr>
 
-</p>
+        <p class="copyright">
 
-</div>
+            © <?php echo esc_html(date('Y')); ?>
 
-<div>
+            <?php echo esc_html(logicboard_get_footer_copyright()); ?>
 
-<h3>Garantia</h3>
+        </p>
 
-<p>
+    </div>
 
-Todos os reparos possuem
-garantia de 6 meses.
-
-</p>
-
-</div>
-
-</div>
-
-<hr>
-
-<p class="copyright">
-
-© <?php echo date('Y'); ?>
-
-LogicBoard.
-
-Todos os direitos reservados.
-
-</p>
-
-</div>
-
-<?php wp_footer(); ?>
+    <?php wp_footer(); ?>
 
 </footer>
 
 </body>
-
 </html>
