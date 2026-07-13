@@ -4,6 +4,22 @@ Todas as alterações importantes deste projeto serão documentadas neste arquiv
 
 O formato segue o padrão **Keep a Changelog** adaptado para o desenvolvimento do tema LogicBoard.
 
+## RC2.5 - CTA totalmente administrável
+
+### Added
+- Seção CTA administrável.
+- Helper `cta.php`.
+- Configuração dos dois botões pelo painel.
+
+### Changed
+- Template `template-parts/cta.php` atualizado para utilizar conteúdo dinâmico.
+
+### Improved
+- Link do botão principal utiliza o WhatsApp como fallback.
+- Botões totalmente configuráveis pelo painel.
+
+---
+
 ## RC2.4 - FAQ totalmente administrável
 
 ### Added

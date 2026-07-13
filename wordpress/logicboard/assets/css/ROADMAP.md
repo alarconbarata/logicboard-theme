@@ -8,13 +8,13 @@
 - [x] Diferenciais administráveis
 - [x] Laboratório administrável
 - [x] FAQ administrável
+- [x] CTA administrável
 
 ### Em andamento
 
-- [ ] CTA administrável
+- [ ] Footer administrável
 
 ### Próximas etapas
 
-- [ ] Footer administrável
 - [ ] RC3.0 - Refatoração Geral
 - [ ] Versão 1.0.0
