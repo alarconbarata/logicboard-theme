@@ -1,5 +1,5 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 ?>
@@ -10,74 +10,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <div class="section-title">
 
-            <span>Como Trabalhamos</span>
+            <span>
+                <?php echo esc_html(logicboard_get_process_badge()); ?>
+            </span>
 
-            <h2>Nosso processo de reparo</h2>
+            <h2>
+                <?php echo esc_html(logicboard_get_process_title()); ?>
+            </h2>
 
             <p>
-                Cada equipamento passa por um fluxo técnico para garantir
-                precisão no diagnóstico e segurança no reparo.
+                <?php echo esc_html(logicboard_get_process_subtitle()); ?>
             </p>
 
         </div>
 
         <div class="process-grid">
 
-            <div class="process-item">
+            <?php for ($i = 1; $i <= 4; $i++) :
 
-                <div class="process-circle">
-                    1
+                $step = logicboard_get_process_step($i);
+
+            ?>
+
+                <div class="process-item">
+
+                    <div class="process-circle">
+                        <?php echo esc_html($step['number']); ?>
+                    </div>
+
+                    <h3>
+                        <?php echo esc_html($step['title']); ?>
+                    </h3>
+
+                    <p>
+                        <?php echo esc_html($step['description']); ?>
+                    </p>
+
                 </div>
 
-                <h3>Recebimento</h3>
-
-                <p>
-                    Registramos o equipamento e coletamos todas as informações da falha apresentada.
-                </p>
-
-            </div>
-
-            <div class="process-item">
-
-                <div class="process-circle">
-                    2
-                </div>
-
-                <h3>Diagnóstico</h3>
-
-                <p>
-                    Realizamos medições eletrônicas, inspeção microscópica e testes específicos.
-                </p>
-
-            </div>
-
-            <div class="process-item">
-
-                <div class="process-circle">
-                    3
-                </div>
-
-                <h3>Reparo</h3>
-
-                <p>
-                    Executamos o reparo utilizando equipamentos profissionais e técnicas de microsolda.
-                </p>
-
-            </div>
-
-            <div class="process-item">
-
-                <div class="process-circle">
-                    4
-                </div>
-
-                <h3>Entrega</h3>
-
-                <p>
-                    Após testes de estabilidade, o equipamento é entregue com garantia de 6 meses.
-                </p>
-
-            </div>
+            <?php endfor; ?>
 
         </div>
 

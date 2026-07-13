@@ -47,19 +47,19 @@ function logicboard_get_process_step($index)
         2 => [
             'number' => '02',
             'title' => 'Orçamento',
-            'description' => 'Apresentação do diagnóstico e aprovação do serviço.'
+            'description' => 'Aprovação do orçamento antes do início do reparo.'
         ],
 
         3 => [
             'number' => '03',
             'title' => 'Reparo',
-            'description' => 'Execução do reparo utilizando equipamentos profissionais.'
+            'description' => 'Execução do reparo com equipamentos profissionais e técnicas avançadas.'
         ],
 
         4 => [
             'number' => '04',
             'title' => 'Testes',
-            'description' => 'Validação completa antes da entrega do equipamento.'
+            'description' => 'Testes funcionais completos e controle de qualidade antes da entrega.'
         ],
 
     ];

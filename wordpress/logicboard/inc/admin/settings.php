@@ -177,6 +177,66 @@ logicboard_add_field(
     'logicboard_process',
     'textarea'
 );
+/*
+|--------------------------------------------------------------------------
+| Diferenciais
+|--------------------------------------------------------------------------
+*/
+
+add_settings_section(
+    'logicboard_differentials',
+    '⭐ Diferenciais',
+    '__return_false',
+    'logicboard'
+);
+
+logicboard_add_field(
+    'differentials_badge',
+    'Badge',
+    'logicboard_differentials'
+);
+
+logicboard_add_field(
+    'differentials_title',
+    'Título da Seção',
+    'logicboard_differentials'
+);
+
+logicboard_add_field(
+    'differentials_subtitle',
+    'Subtítulo',
+    'logicboard_differentials',
+    'textarea'
+);
+
+/*
+|--------------------------------------------------------------------------
+| Cards
+|--------------------------------------------------------------------------
+*/
+
+for ($i = 1; $i <= 4; $i++) {
+
+    logicboard_add_field(
+        "differential_{$i}_number",
+        "Card {$i} - Número",
+        'logicboard_differentials'
+    );
+
+    logicboard_add_field(
+        "differential_{$i}_title",
+        "Card {$i} - Título",
+        'logicboard_differentials'
+    );
+
+    logicboard_add_field(
+        "differential_{$i}_description",
+        "Card {$i} - Descrição",
+        'logicboard_differentials',
+        'textarea'
+    );
+
+}
 
 /*
 |--------------------------------------------------------------------------

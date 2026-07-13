@@ -10,71 +10,45 @@ if (!defined('ABSPATH')) {
 
         <div class="section-title">
 
-            <span>Por que escolher a LogicBoard?</span>
+            <span>
+                <?php echo esc_html(logicboard_get_differentials_badge()); ?>
+            </span>
 
-            <h2>Especialização, tecnologia e segurança</h2>
+            <h2>
+                <?php echo esc_html(logicboard_get_differentials_title()); ?>
+            </h2>
 
             <p>
-                Nosso  laboratório  conta com equipamentos profissionais e processos técnicos 
-                rigorosos para realizar reparos avançados em placas lógicas Apple, garantindo 
-                qualidade, confiabilidade e segurança em cada serviço.
+                <?php echo esc_html(logicboard_get_differentials_subtitle()); ?>
             </p>
 
         </div>
 
         <div class="differentials-grid">
 
-            <article class="diff-card">
+            <?php for ($i = 1; $i <= 4; $i++) :
 
-                <div class="diff-number">01</div>
+                $item = logicboard_get_differential($i);
 
-                <h3>Especialização Apple</h3>
+            ?>
 
-                <p>
-                    Atendimento dedicado exclusivamente ao ecossistema Apple,
-                    com foco em placas lógicas de MacBooks.
-                </p>
+                <article class="diff-card">
 
-            </article>
+                    <div class="diff-number">
+                        <?php echo esc_html($item['number']); ?>
+                    </div>
 
-            <article class="diff-card">
+                    <h3>
+                        <?php echo esc_html($item['title']); ?>
+                    </h3>
 
-                <div class="diff-number">02</div>
+                    <p>
+                        <?php echo esc_html($item['description']); ?>
+                    </p>
 
-                <h3>Equipamentos Profissionais</h3>
+                </article>
 
-                <p>
-                    Microscópios, estações de microsolda e instrumentos de
-                    medição de alta precisão.
-                </p>
-
-            </article>
-
-            <article class="diff-card">
-
-                <div class="diff-number">03</div>
-
-                <h3>Garantia de 6 meses</h3>
-
-                <p>
-                    Todos os reparos são entregues com garantia e testes
-                    completos de funcionamento.
-                </p>
-
-            </article>
-
-            <article class="diff-card">
-
-                <div class="diff-number">04</div>
-
-                <h3>Diagnóstico Preciso</h3>
-
-                <p>
-                    Identificamos a causa da falha antes do reparo,
-                    reduzindo custos e aumentando a confiabilidade.
-                </p>
-
-            </article>
+            <?php endfor; ?>
 
         </div>
 
