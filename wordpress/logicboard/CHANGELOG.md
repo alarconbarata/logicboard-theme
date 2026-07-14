@@ -4,6 +4,25 @@ Todas as alterações importantes deste projeto serão documentadas neste arquiv
 
 O formato segue o padrão **Keep a Changelog** adaptado para o desenvolvimento do tema LogicBoard.
 
+## RC3.0 - Auditoria da Arquitetura
+
+### Adicionado
+- Sanitização centralizada das opções do painel.
+- Versionamento automático dos scripts administrativos.
+- Suporte HTML5 no tema.
+
+### Melhorado
+- Padronização dos arquivos do núcleo (`setup.php`, `enqueue.php`, `admin.php`).
+- Validação e segurança do formulário de contato.
+- Organização e documentação interna do código.
+- Padronização do painel administrativo.
+
+### Corrigido
+- Correção do retorno de sucesso em caso de falha no envio de e-mails.
+- Uso de `wp_safe_redirect()` em substituição a `wp_redirect()`.
+
+---
+
 ## RC2.6 - Footer totalmente administrável
 
 ### Added

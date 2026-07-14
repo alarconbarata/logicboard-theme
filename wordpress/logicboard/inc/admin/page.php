@@ -4,29 +4,31 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+/*
+|--------------------------------------------------------------------------
+| Página de Configurações
+|--------------------------------------------------------------------------
+*/
+
 function logicboard_settings_page()
 {
-?>
+    ?>
 
-<div class="wrap">
+    <div class="wrap">
 
-    <h1>LogicBoard</h1>
+        <h1><?php echo esc_html__('LogicBoard', 'logicboard'); ?></h1>
 
-    <form method="post" action="options.php">
+        <form method="post" action="options.php">
 
-        <?php
+            <?php
+            settings_fields('logicboard_settings');
+            do_settings_sections('logicboard');
+            submit_button(__('Salvar Configurações', 'logicboard'));
+            ?>
 
-        settings_fields('logicboard_settings');
+        </form>
 
-        do_settings_sections('logicboard');
+    </div>
 
-        submit_button('Salvar Configurações');
-
-        ?>
-
-    </form>
-
-</div>
-
-<?php
+    <?php
 }

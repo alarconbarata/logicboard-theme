@@ -9,9 +9,12 @@ add_action('admin_init', 'logicboard_register_settings');
 function logicboard_register_settings()
 {
     register_setting(
-        'logicboard_settings',
-        'logicboard_options'
-    );
+    'logicboard_settings',
+    'logicboard_options',
+    [
+        'sanitize_callback' => 'logicboard_sanitize_options',
+    ]
+);
 
     /*
     |--------------------------------------------------------------------------
@@ -610,5 +613,73 @@ break;
 
             break;
     }
+}
+/*
+|--------------------------------------------------------------------------
+| Sanitização das Opções
+|--------------------------------------------------------------------------
+*/
+
+function logicboard_sanitize_options($options)
+{
+    if (!is_array($options)) {
+        return [];
+    }
+
+    foreach ($options as $key => $value) {
+
+        switch ($key) {
+
+            /*
+            |--------------------------------------------------------------------------
+            | Campos de E-mail
+            |--------------------------------------------------------------------------
+            */
+
+            case 'email':
+
+                $options[$key] = sanitize_email($value);
+
+                break;
+
+            /*
+            |--------------------------------------------------------------------------
+            | URLs
+            |--------------------------------------------------------------------------
+            */
+
+            case 'maps':
+
+            case 'instagram':
+
+            case 'linkedin':
+
+            case 'hero_button_1_url':
+
+            case 'hero_button_2_url':
+
+            case 'cta_button_1_url':
+
+            case 'cta_button_2_url':
+
+                $options[$key] = esc_url_raw($value);
+
+                break;
+
+            /*
+            |--------------------------------------------------------------------------
+            | Demais Campos
+            |--------------------------------------------------------------------------
+            */
+
+            default:
+
+                $options[$key] = sanitize_text_field($value);
+
+                break;
+        }
+    }
+
+    return $options;
 }
 
